@@ -1,0 +1,49 @@
+
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#7c3aed;
+  --glass: rgba(255,255,255,0.04);
+  --radius:14px;
+  --maxw:1100px;
+  --gap:18px;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:linear-gradient(180deg,#071021 0%, #07172a 60%);color:#e6eef8}
+.container{max-width:var(--maxw);margin:36px auto;padding:28px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:18px}
+.nav{display:flex;gap:10px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600}
+.nav a.active, .nav a:hover{background:var(--glass);color:white}
+.langswitch{display:flex;gap:8px;align-items:center}
+.langswitch button{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:8px;color:var(--muted);cursor:pointer}
+.langswitch button.active{background:var(--accent);color:white;border-color:transparent}
+
+.main{display:grid;grid-template-columns:1fr;gap:18px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+.profile{display:flex;gap:18px;align-items:center}
+.avatar{width:120px;height:120px;border-radius:12px;overflow:hidden;flex-shrink:0;border:1px solid rgba(255,255,255,0.04)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.meta h1{margin:0;font-size:22px}
+.meta p{margin:6px 0;color:var(--muted)}
+
+.grid-two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:880px){.grid-two{grid-template-columns:1fr}.header{flex-direction:column;align-items:flex-start}.brand{gap:10px}}
+
+.table{width:100%;border-collapse:collapse}
+.table th, .table td{padding:10px;border-bottom:1px dashed rgba(255,255,255,0.03);text-align:left}
+.kv{display:flex;flex-direction:column;gap:6px}
+.kv .k{color:var(--muted);font-size:13px}
+.kv .v{font-weight:700}
+
+.footer{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px}
+.button{background:var(--accent);padding:10px 14px;border-radius:10px;color:white;text-decoration:none;font-weight:700}
+.small{font-size:13px;color:var(--muted)}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600;color:var(--muted)}
+.chart-wrap{height:220px;width:100%;display:flex;align-items:center;justify-content:center;padding:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:10px}
+.threats-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.list-card{padding:12px;background:rgba(255,255,255,0.02);border-radius:10px}
